@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Liguilla Premier</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+  <div class="logo">
+    <img src="imagenes/logoshengi.png" class="logo-img">
+
+    <div class="logo-texto">
+      <span class="verde">LIGUILLA</span> 2026<br>
+      <span class="verde">PREMIER</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="javascript:void(0)" id="btn-partidos">INICIO</a>
+    <a href="#" id="btn-posiciones" class="activo">POSICIONES</a>
+    <a href="#" id="btn-goleadores">GOLEADORES</a>
+
+    <div class="dropdown">
+
+      <a href="#" class="dropdown-btn">
+        MAS <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <div class="dropdown-content">
+
+        <a href="#" class="MAS-btn activa-cat" data-cat="primera">
+          Primera División
+        </a>
+
+        <a href="#" class="MAS-btn" data-cat="segunda">
+          Segunda División "B"
+        </a>
+
+        <a href="#" class="MAS-btn" data-cat="femenino">
+          Femenino
+        </a>
+  
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<!-- POSICIONES -->
+<section id="posiciones-section">
+
+ <div class="fila encabezado">
+  <span>Club</span>
+  <span>GF</span>
+  <span>GC</span>
+  <span>DG</span>
+  <span>PTS</span>
+</div>
+
+  <div id="tabla"></div>
+
+</section>
+
+<!-- PARTIDOS -->
+<section id="partidos-section">
+
+  <div class="fechas">
+    <span class="activa">FECHA 1</span>
+    <span>FECHA 2</span>
+    <span>FECHA 3</span>
+    <span>FECHA 4</span>
+    <span>FECHA 5</span>
+    <span>FECHA 6</span>
+    <span>FECHA 7</span>
+    <span>FECHA 8</span>
+    <span>FECHA 9</span>
+    <span>FECHA 10</span>
+    <span>FECHA 11</span>
+    <span>FECHA 12</span>
+   
+  </div>
+
+  <div class="anuncios-slider">
+
+    <div class="track">
+
+      <img src="anuncios/1.png">
+      <img src="anuncios/2.png">
+      <img src="anuncios/3.png">
+      <img src="anuncios/4.png">
+      <img src="anuncios/5.png">
+      <img src="anuncios/6.png">
+      <img src="anuncios/7.png">
+      <img src="anuncios/8.png">
+      <img src="anuncios/9.png">
+      <img src="anuncios/10.png">
+      
+
+      <img src="anuncios/1.png">
+      <img src="anuncios/2.png">
+      <img src="anuncios/3.png">
+      <img src="anuncios/4.png">
+      <img src="anuncios/5.png">
+      <img src="anuncios/6.png">
+      <img src="anuncios/7.png">
+      <img src="anuncios/8.png">
+      <img src="anuncios/9.png">
+      <img src="anuncios/10.png">
+
+    </div>
+
+  </div>
+
+  <div id="lista-partidos"></div>
+
+</section>
+
+<!-- GOLEADORES -->
+<section id="goleadores-section">
+
+  <h2>GOLEADORES</h2>
+
+  <div id="lista-goleadores"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+<footer>
+
+  <div class="footer-contenido">
+
+    <div class="sponsors">
+
+
+    
+      <p>© 2026 SHENGI Studio</p>
+
+      <div class="redes">
+
+        <a href="https://instagram.com/shengistudio" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://facebook.com/Shengistudio" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="mailto:shengistudio@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
