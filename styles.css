@@ -1,0 +1,687 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #141414;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #111;
+  gap: 20px;
+}
+
+.verde {
+  color: #ccff00;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a.activo {
+  color: #c8ff00;
+  border-bottom: 2px solid #c8ff00;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-texto {
+  line-height: 1.1;
+}
+
+/* =========================
+   FECHAS
+========================= */
+
+.fechas {
+  display: flex;
+  background: #d0ff00d4;
+  color: black;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.fechas::-webkit-scrollbar {
+  display: none;
+}
+
+.fechas span {
+  padding: 10px 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.fechas .activa {
+  background: #fffb00;
+}
+
+/* =========================
+   PARTIDOS
+========================= */
+
+#lista-partidos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.partido-card {
+  width: 90%;
+  max-width: 550px;
+  background: #111;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.equipos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.team img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.marcador {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+#partidos-section,
+#goleadores-section {
+  display: none;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.anuncios-slider {
+  overflow: hidden;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 2px;
+  width: max-content;
+  animation: scrollInfinito 60s linear infinite;
+}
+
+.track img {
+  width: 420px;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 0;
+  background: #000;
+  display: block;
+  flex-shrink: 0;
+}
+
+.track img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .anuncios-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .track {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: max-content;
+    animation: scrollInfinito 40s linear infinite;
+  }
+
+  .track img {
+    width: 100vw;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: block;
+    background: #000;
+  }
+
+}
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media (max-width: 480px) {
+
+  .track {
+    gap: 2px;
+    animation: scrollInfinito 35s linear infinite;
+  }
+
+  .track img {
+    width: 100vw;
+    height: 320px;
+    object-fit: contain;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: block;
+    background: #000;
+  }
+
+}
+/* =========================
+   TABLA
+========================= */
+
+.fila {
+  display: grid;
+  grid-template-columns: 2fr .8fr .8fr .8fr .8fr;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  align-items: center;
+  text-align: center;
+}
+
+.fila span:first-child {
+  text-align: left;
+}
+
+.encabezado {
+  font-weight: bold;
+  background: #282727;
+}
+
+.equipo-tabla {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.equipo-tabla img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+.estado {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.vivo {
+  background: #00ff88;
+  color: black;
+}
+
+.finalizado {
+  background: #444;
+  color: white;
+}
+
+.proximo {
+  background: #ffaa00;
+  color: black;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =========================
+   REDES
+========================= */
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes a {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.redes a:hover {
+  transform: scale(1.2);
+}
+
+.redes a:nth-child(1) {
+  color: #E1306C;
+}
+
+.redes a:nth-child(2) {
+  color: #1877F2;
+}
+
+.redes a:nth-child(3) {
+  color: #00ff88;
+}
+
+/* =========================
+   SPONSORS
+========================= */
+
+.sponsors {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.sponsors h3 {
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.sponsors-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sponsors-container img {
+  width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.sponsors-container img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #181818;
+  min-width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  top: 35px;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: #00ff00;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.activa-cat {
+  background: #00ff00;
+  color: black !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 15px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-texto {
+    font-size: 14px;
+  }
+
+  .fechas {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .fechas span {
+    min-width: 90px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .partido-card {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .equipos {
+    gap: 10px;
+  }
+
+  .team {
+    width: 35%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .team span {
+    font-size: 12px;
+  }
+
+  .marcador {
+    font-size: 18px;
+    min-width: 70px;
+    text-align: center;
+  }
+
+  .info {
+    margin-top: 15px;
+    font-size: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fila {
+    grid-template-columns: 2fr .7fr .7fr .7fr .7fr;
+    font-size: 13px;
+    padding: 10px 5px;
+  }
+
+  .equipo-tabla img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .track {
+  gap: 12px;
+  animation: scrollInfinito 45s linear infinite;
+}
+
+.track img {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    min-width: 200px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  .sponsors-container {
+    gap: 12px;
+  }
+
+  .sponsors-container img {
+    width: 90px;
+  }
+
+  .redes {
+    gap: 20px;
+  }
+
+  .redes a {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media (max-width: 480px) {
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .logo-texto {
+    font-size: 13px;
+  }
+
+  .team span {
+    font-size: 11px;
+  }
+
+  .marcador {
+    font-size: 16px;
+  }
+
+.track {
+  animation: scrollInfinito 38s linear infinite;
+}
+
+.track img {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+  .fila {
+    font-size: 12px;
+  }
+
+  .equipo-tabla img {
+    width: 22px;
+    height: 22px;
+  }
+/* =========================
+   GOLEADORES
+========================= */
+
+
+.goleador-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.escudo-goleador {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+}/* =========================
+   GOLEADORES
+========================= */
+
+#goleadores-section {
+  padding: 20px;
+}
+
+.goleador-fila {
+  display: grid;
+  grid-template-columns: 50px 1fr 70px;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+}
+
+.goleador-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.escudo-goleador {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.goleador-fila span:last-child {
+  text-align: center;
+  font-weight: bold;
+  color: #fbfcfb;
+}
+#btn-ver-mas,
+#btn-ver-menos {
+  background: #fafcfa;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#btn-ver-mas:hover,
+#btn-ver-menos:hover {
+  transform: scale(1.05);
+}
